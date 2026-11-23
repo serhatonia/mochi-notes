@@ -20,13 +20,15 @@ The executable is written to `target\release\mochi-notes.exe`.
 
 ## Website
 
-The landing page lives in [`site/`](site/index.html) — plain HTML + CSS, no JavaScript.
+The landing page lives in [`docs/`](docs/index.html) — plain HTML + CSS, no JavaScript.
+GitHub Pages only publishes the repository root or the `docs/` folder, which is why
+the site is kept there.
 
-Open `site/index.html` in a browser to preview it. The download button points at
-`site/downloads/MochiNotes.exe`, so copy a fresh build there before publishing:
+Open `docs/index.html` in a browser to preview it. The download button points at
+`docs/downloads/MochiNotes.exe`, so copy a fresh build there before publishing:
 
 ```powershell
-Copy-Item target\release\mochi-notes.exe site\downloads\MochiNotes.exe
+Copy-Item target\release\mochi-notes.exe docs\downloads\MochiNotes.exe
 ```
 
 ## Publish with GitHub Pages
@@ -44,8 +46,8 @@ Copy-Item target\release\mochi-notes.exe site\downloads\MochiNotes.exe
    ```
 
 3. In the repository, go to **Settings → Pages**.
-4. Set **Source** to `Deploy from a branch`, choose `main` and the `/docs`-style
-   folder `site` (select **/site** from the folder dropdown), then save.
+4. Set **Source** to `Deploy from a branch`, choose `main` and the **`/docs`**
+   folder from the dropdown, then save.
 5. Your site will be live at `https://serhatonia.github.io/mochi-notes/`.
 
 Keep `site/downloads/MochiNotes.exe` in sync whenever you ship a new build.
