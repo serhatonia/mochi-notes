@@ -1,0 +1,10 @@
+# Rust build output (large, regenerable)
+/target/
+
+# Editor / OS noise
+.vscode/
+.idea/
+*.swp
+Thumbs.db
+desktop.ini
+.DS_Store

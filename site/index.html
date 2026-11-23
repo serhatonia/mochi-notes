@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Mochi Notes — a cozy, pastel note-taking app built with pure Rust and Iced. Local-first, offline, yours.">
+  <title>Mochi Notes — a soft place for your thoughts</title>
+  <link rel="icon" href="assets/mochi.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="glow glow-one" aria-hidden="true"></div>
+  <div class="glow glow-two" aria-hidden="true"></div>
+
+  <header class="nav-wrap">
+    <nav class="nav" aria-label="Main navigation">
+      <a class="brand" href="#top">
+        <img src="assets/mochi.svg" alt="" class="brand-mochi">
+        <span>Mochi <b>Notes</b></span>
+      </a>
+      <div class="nav-links">
+        <a href="#features">Features</a>
+        <a href="#themes">Themes</a>
+        <a href="#download">Download</a>
+      </div>
+      <a class="nav-cta" href="https://github.com/serhatonia" target="_blank" rel="noopener">GitHub</a>
+    </nav>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="hero-copy">
+        <span class="eyebrow"><span class="dot"></span> Pure Rust · Iced · SQLite</span>
+        <h1>Your thoughts, wrapped in <em>something soft.</em></h1>
+        <p class="lede">A cozy little desk for your notes. Markdown, folders, tags and a mascot that cheers you on — all in one calm, pastel window.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="downloads/MochiNotes.exe" download>Get Mochi Notes <span aria-hidden="true">↓</span></a>
+          <a class="button ghost" href="#features">Explore features</a>
+        </div>
+        <div class="hero-facts">
+          <div><strong>6</strong><span>pastel themes</span></div>
+          <div><strong>0</strong><span>cloud accounts</span></div>
+          <div><strong>100%</strong><span>on your machine</span></div>
+        </div>
+      </div>
+
+      <div class="hero-visual">
+        <div class="window-frame">
+          <div class="window-bar">
+            <span class="window-title">Mochi Notes</span>
+            <span class="window-dots"><i></i><i></i><i></i></span>
+          </div>
+          <img src="assets/app-preview.png" alt="Mochi Notes dashboard showing a cozy pastel note library" class="app-shot">
+        </div>
+        <img src="assets/mochi.svg" alt="" class="hero-mochi" aria-hidden="true">
+        <div class="bubble">hi, I live in your notes ♡</div>
+      </div>
+    </section>
+
+    <section class="strip" aria-label="Local-first promise">
+      <div class="strip-inner">
+        <span>✦ No tracking</span><span>✦ No sign-up</span><span>✦ No internet required</span><span>✦ Just your notes</span>
+      </div>
+    </section>
+
+    <section id="features" class="section">
+      <div class="section-head">
+        <span class="eyebrow">Everything you need</span>
+        <h2>Small features, big comfort.</h2>
+        <p>Quietly powerful tools that stay out of your way.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature">
+          <div class="feature-icon pink"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h16v14H4z"/><path d="M8 9h8M8 13h8M8 17h5"/></svg></div>
+          <h3>Markdown writing</h3>
+          <p>Headings, lists, quotes, code and checklists — with a live preview when you want it.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon mint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+          <h3>Calm autosave</h3>
+          <p>Everything saves itself a moment after you stop typing. No red dots, no panic.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon lilac"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7h7l2 2h9v10H3z"/><path d="M3 7V5h7l2 2"/></svg></div>
+          <h3>Folders &amp; tags</h3>
+          <p>Give every idea a little home. Drag notes between folders, or layer tags on top.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon blue"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg></div>
+          <h3>Instant search</h3>
+          <p>Find a thought in a heartbeat — across titles, bodies, tags and favorites.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon peach"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M18.4 5.6l-2.1 2.1M7.7 16.3l-2.1 2.1"/><circle cx="12" cy="12" r="4"/></svg></div>
+          <h3>Six soft themes</h3>
+          <p>Strawberry Milk to Midnight Mochi. Pick a mood and the whole window follows.</p>
+        </article>
+        <article class="feature">
+          <div class="feature-icon rose"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12M8 11l4 4 4-4"/><path d="M4 17v3h16v-3"/></svg></div>
+          <h3>Backups &amp; export</h3>
+          <p>Local backups, one-click Markdown export and a tidy index when you take everything with you.</p>
+        </article>
+      </div>
+    </section>
+
+    <section id="themes" class="section themes">
+      <div class="section-head">
+        <span class="eyebrow">Pick a mood</span>
+        <h2>Six hand-mixed palettes.</h2>
+        <p>Each one changes the entire app — not just an accent.</p>
+      </div>
+      <div class="theme-grid">
+        <article class="theme-card strawberry"><div class="swatches"><i></i><i></i><i></i><i></i></div><b>Strawberry Milk</b><span>Sweet, soft and dreamy</span></article>
+        <article class="theme-card matcha"><div class="swatches"><i></i><i></i><i></i><i></i></div><b>Matcha Latte</b><span>Calm green mornings</span></article>
+        <article class="theme-card lavender"><div class="swatches"><i></i><i></i><i></i><i></i></div><b>Lavender Dream</b><span>Airy, wandering thoughts</span></article>
+        <article class="theme-card blueberry"><div class="swatches"><i></i><i></i><i></i><i></i></div><b>Blueberry Cloud</b><span>Soft blue skies</span></article>
+        <article class="theme-card vanilla"><div class="swatches"><i></i><i></i><i></i><i></i></div><b>Vanilla Cream</b><span>Warm and buttery</span></article>
+        <article class="theme-card midnight"><div class="swatches"><i></i><i></i><i></i><i></i></div><b>Midnight Mochi</b><span>For quiet night owls</span></article>
+      </div>
+    </section>
+
+    <section class="privacy-section">
+      <div class="privacy-card">
+        <div class="privacy-mochi"><img src="assets/mochi.svg" alt="Mochi waving"></div>
+        <div>
+          <span class="eyebrow light">Local by design</span>
+          <h2>Nothing leaves your desk.</h2>
+          <p>Your notes live in a single SQLite file on your computer. No account, no telemetry, no surprise sync. Backups stay in a folder you can actually see.</p>
+          <a class="text-link" href="#download">Take a look yourself →</a>
+        </div>
+      </div>
+    </section>
+
+    <section id="download" class="section download">
+      <div class="download-card">
+        <img src="assets/mochi.svg" alt="" class="download-mochi">
+        <h2>Ready for a softer desk?</h2>
+        <p>One executable. Windows 10 and 11. Double-click and start writing.</p>
+        <a class="button primary big" href="downloads/MochiNotes.exe" download>Download for Windows <span aria-hidden="true">↓</span></a>
+        <span class="download-note">Portable · no installer · ~22 MB</span>
+      </div>
+    </section>
+
+    <section class="credits">
+      <img src="assets/mochi.svg" alt="" class="credits-mochi">
+      <p>Made with love by <b>Serhat</b></p>
+      <div class="credits-links">
+        <a href="https://github.com/serhatonia" target="_blank" rel="noopener">github/serhatonia</a>
+        <span aria-hidden="true">·</span>
+        <a href="https://x.com/serhatonia" target="_blank" rel="noopener">x/serhatonia</a>
+      </div>
+      <span class="credits-stack">Built with Rust, Iced and a lot of late-night pixels.</span>
+    </section>
+  </main>
+
+  <footer>
+    <span>© 2026 Mochi Notes</span>
+    <a href="#top">Back to top ↑</a>
+  </footer>
+</body>
+</html>
