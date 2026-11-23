@@ -18,6 +18,25 @@ cargo build --release
 
 The executable is written to `target\release\mochi-notes.exe`.
 
+## Linux
+
+The code is cross-platform: URLs and folders open through `xdg-open` on Linux,
+`open` on macOS and `cmd`/`explorer` on Windows. SQLite is bundled, and file
+dialogs use the XDG desktop portal, so no GTK development package is required.
+
+On Debian/Ubuntu:
+
+```bash
+sudo apt install build-essential pkg-config libxkbcommon-dev libwayland-dev \
+  wayland-protocols libx11-dev libxcursor-dev libxi-dev libxrandr-dev \
+  libinput-dev libudev-dev libfontconfig1-dev
+cargo build --release
+./target/release/mochi-notes
+```
+
+A GitHub Actions workflow (`.github/workflows/linux.yml`) builds the Linux
+binary automatically on every push; download it from the **Actions** tab.
+
 ## Website
 
 The landing page lives in [`docs/`](docs/index.html) — plain HTML + CSS, no JavaScript.

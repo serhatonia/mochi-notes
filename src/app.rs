@@ -16,7 +16,7 @@ use crate::message::{
     ToastKind,
 };
 use crate::models::{Folder, Note, Settings, Tag};
-use crate::services::{backup, export, paths::Paths};
+use crate::services::{backup, export, open, paths::Paths};
 use crate::theme::{self, Palette};
 use crate::utils::text as text_utils;
 use crate::views;
@@ -684,9 +684,7 @@ impl Mochi {
                 Task::none()
             }
             Message::OpenLink(url) => {
-                let _ = std::process::Command::new("cmd")
-                    .args(["/C", "start", "", &url])
-                    .spawn();
+                open::url(&url);
                 Task::none()
             }
 
@@ -747,9 +745,7 @@ impl Mochi {
                 Task::none()
             }
             Message::OpenDataFolder => {
-                let _ = std::process::Command::new("explorer")
-                    .arg(&self.paths.data_dir)
-                    .spawn();
+                open::folder(&self.paths.data_dir);
                 Task::none()
             }
             Message::RefreshBackups => {
